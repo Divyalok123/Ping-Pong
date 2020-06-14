@@ -38,7 +38,6 @@ body {
 
 .pop-up {
 	position: absolute;
-	left: 41%;
 	top: 40%;
 	border: 1px solid grey;
 	transition: 1s all;
@@ -62,7 +61,6 @@ body {
 	}
 
 	to {
-		left: 41%;
 		top: 40%;
 		transform: scale(1.3) rotate(0deg);
 	}
@@ -87,7 +85,7 @@ body {
 }
 
 .pop-header #cross:hover {
-	transform: scale(0.8);
+	transform: scale(0.9);
 }
 
 #cross i {
@@ -102,14 +100,14 @@ body {
 
 #ball {
 	position: absolute;
-	left: 48%;
 	z-index: 100;
-	top: 45%;
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
     background: linear-gradient(45deg, rgba(220,20,60, 80%), rgba(125, 125, 131, 80%));
 	visibility: hidden;
+	left: 48%;
+	top: 45%;
 }
 
 @media (max-width: 800px)
