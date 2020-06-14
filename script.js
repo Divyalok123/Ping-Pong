@@ -5,28 +5,33 @@ var ball = document.getElementById("ball");
 var uprod = document.getElementById("top-element");
 var downrod = document.getElementById("bottom-element");
 
+var flag = false;
+
 //adding styles to pop-up box and ball
 document.getElementById("cross").addEventListener("click", function () {
-	popBox[0].style.visibility = "hidden";
-	popBox[0].style.opacity = "0";
-	popBox[0].style.transition = "visibility 1.2s linear 1s, opacity 200ms";
-	alert("Let's Start!");
-	ball.style.visibility = "visible";
+	if(!flag)
+	{
+		flag = true;
+		popBox[0].style.visibility = "hidden";
+		popBox[0].style.opacity = "0";
+		popBox[0].style.transition = "visibility 1.2s linear 1s, opacity 200ms";
+		ball.style.visibility = "visible";
+		alert("Let's start");
+	}
 });
 
 //storing rods' and ball's dimensions
-let rodwidth = uprod.getBoundingClientRect().width;
-let ballradius = ball.getBoundingClientRect().width;
-
-let windowwidth = window.innerWidth;
-let windowheight = window.innerHeight;
+// let rodwidth = uprod.getBoundingClientRect().width;
+// let ballradius = ball.getBoundingClientRect().width;
+// let windowwidth = window.innerWidth;
+// let windowheight = window.innerHeight;
 
 let currscore,
 	maxscore,
 	interval,
 	rod,
-	ballSpeedX = 5,
-	ballSpeedY = 5;
+	ballSpeedX = 3,
+	ballSpeedY = 3;
 
 //storing details to show on alert
 const storeName = "thename",
@@ -58,10 +63,10 @@ function reset(rod) {
 
 	if (rod === rod1name) {
 		ball.style.top = uprod.offsetTop + uprod.offsetHeight + "px";
-		ballSpeedY = 5;
+		ballSpeedY = 3;
 	} else if (rod === rod2name) {
 		ball.style.top = downrod.offsetTop - downrod.offsetHeight + "px";
-		ballSpeedY = -5;
+		ballSpeedY = -3;
 	}
 	currscore = 0;
 	gamestatus = false;
