@@ -21,10 +21,10 @@ document.getElementById("cross").addEventListener("click", function () {
 });
 
 //storing rods' and ball's dimensions
-// let rodwidth = uprod.getBoundingClientRect().width;
-// let ballradius = ball.getBoundingClientRect().width;
-// let windowwidth = window.innerWidth;
-// let windowheight = window.innerHeight;
+let rodwidth = uprod.getBoundingClientRect().width;
+let ballradius = ball.getBoundingClientRect().width;
+let windowwidth = window.innerWidth;
+let windowheight = window.innerHeight;
 
 let currscore,
 	maxscore,
